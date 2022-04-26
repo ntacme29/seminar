@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 24, 2022 lúc 10:54 PM
+-- Thời gian đã tạo: Th4 26, 2022 lúc 07:47 PM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.3
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `rfid`
+-- Cơ sở dữ liệu: `rfid2`
 --
 
 -- --------------------------------------------------------
@@ -56,7 +56,7 @@ INSERT INTO `phanquyen` (`IDPhanQuyen`, `TenQuyen`, `MoTaQuyen`, `TrangThai`) VA
 CREATE TABLE `productinstance` (
   `product_instance_id` varchar(30) NOT NULL,
   `product_line_id` varchar(30) NOT NULL,
-  `is_purcharsed` int(1) NOT NULL,
+  `product_mount` int(1) NOT NULL,
   `is_check` int(1) NOT NULL,
   `TrangThai` varchar(10) NOT NULL DEFAULT 'Hiện'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -65,8 +65,10 @@ CREATE TABLE `productinstance` (
 -- Đang đổ dữ liệu cho bảng `productinstance`
 --
 
-INSERT INTO `productinstance` (`product_instance_id`, `product_line_id`, `is_purcharsed`, `is_check`, `TrangThai`) VALUES
+INSERT INTO `productinstance` (`product_instance_id`, `product_line_id`, `product_mount`, `is_check`, `TrangThai`) VALUES
 ('12345', 'SP01', 5, 1, 'Hiện'),
+('123456', 'SP01', 1110, 1, 'Hiện'),
+('22222', 'SP01', 222, 1, 'Hiện'),
 ('23456', 'SP02', 3, 1, 'Hiện');
 
 -- --------------------------------------------------------
